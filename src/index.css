@@ -1,38 +1,71 @@
-body{
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
     text-align: center;
 }
-.menu-btns{
+
+.menu-btns {
     justify-content: center;
     display: flex;
 }
-.items-container{
+
+.items-container {
+    box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    padding:15px;
+    /* gap:1px; */
+    /* flex: 1; */
+    padding: 15px;
 }
-.card{
-    position: relative;
-    width:30%;
-    overflow: hidden;
-}
-.card-img{
+
+.card {
     position: relative;
     overflow: hidden;
-    max-height:200px;
-    width:100%;
-    
-    aspect-ratio:2/1;
+    width: calc(25% - 10px); /* Adjust the width and add a gap of 10px */
+    margin: 5px; /* Add margin-bottom to create the desired gap */
+}
+
+.card-img {
+    position: relative;
+    overflow: hidden;
+    max-height: 200px;
+    width: 100%;
+    aspect-ratio: 2/1;
     object-fit: cover;
     background-size: cover;
-    transition:transform .8s ease;
+    transition: transform .8s ease;
 }
-.card-img:hover{
-    transform:scale(1.06);
+
+.card-img:hover {
+    transform: scale(1.06);
 }
-.card-title{
-    color:rgb(255, 0, 13);
+
+.card-title {
+    color: rgb(255, 0, 13);
 }
-.card-text{
+
+.card-text {
     color: black;
+}
+
+/* Media screen options for 992px and below */
+@media screen and (max-width: 992px) {
+    .card {
+        width: calc(33.33% - 10px); /* Adjust the width for 2 cards per row */
+    }
+}
+@media screen and (max-width: 768px) {
+    .card {
+        width: calc(50% - 10px); /* Adjust the width for 2 cards per row */
+    }
+}
+
+/* Media screen options for 576px and below */
+@media screen and (max-width: 576px) {
+    .card {
+        width: 100%; /* Adjust the width for 1 card per row */
+    }
 }

@@ -8,21 +8,24 @@ const mycategories= new Set(data.map((item)=>item.category)) //New set creates t
 const allCategories=['All',...mycategories]
 const Menuitems = () => {
     const [menuItems,setMenuItems]=useState(data)
+    const [category,setCategory]=useState('All')
     const [categories, setCategories]=useState(allCategories) //categories =allCategories
 
     const filterItems=(category)=>{
         if(category==='All'){
             console.log('all');
-            return setMenuItems(data)
+            return setMenuItems(data), setCategory('ALL')
         }
         let newItems= data.filter((item)=>{
             return item.category===category
         })
         setMenuItems(newItems);
+        setCategory(category.toLocaleUpperCase())
     }
   return (
     <div>
      <h2>OUR MENU</h2>
+     <h4>{category}</h4>
      <Categories categories={categories} fxn={filterItems}/>
      <Menu items={menuItems}/>
     </div>
