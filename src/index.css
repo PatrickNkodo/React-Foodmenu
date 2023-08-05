@@ -1,0 +1,25 @@
+body{
+    text-align: center;
+}
+.menu-btns{
+    justify-content: center;
+    display: flex;
+}
+.items-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding:15px;
+}
+.card{
+    width:30%;
+}
+.card-img{
+    max-height:200px;
+}
+.card-title{
+    color:rgb(255, 0, 13);
+}
+.card-text{
+    color: black;
+}
