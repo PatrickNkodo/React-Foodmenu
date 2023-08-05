@@ -12,10 +12,23 @@ body{
     padding:15px;
 }
 .card{
+    position: relative;
     width:30%;
+    overflow: hidden;
 }
 .card-img{
+    position: relative;
+    overflow: hidden;
     max-height:200px;
+    width:100%;
+    
+    aspect-ratio:2/1;
+    object-fit: cover;
+    background-size: cover;
+    transition:transform .8s ease;
+}
+.card-img:hover{
+    transform:scale(1.06);
 }
 .card-title{
     color:rgb(255, 0, 13);

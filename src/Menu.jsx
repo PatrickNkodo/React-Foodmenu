@@ -5,7 +5,7 @@ const Menu = ({ items }) => {
         const { title, category, price, img, desc } = x;
         return (
           <div className="card mb-3">
-            <img className="card-img" width="200px" src={img} alt={title} />
+            <img className="card-img" src={img} alt={title} />
             <div className="card-body">
               <h4 className="card-title">{title}</h4>
               <h6 className="card-text">{category}</h6>
